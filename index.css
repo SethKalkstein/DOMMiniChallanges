@@ -1,0 +1,18 @@
+.ex1buttons {
+	padding: 10px;
+}
+
+#noHoverZone {
+	height: 200px;
+	width: 200px;
+	background-color: yellow;
+	color: purple;
+	margin: 15px;
+}
+
+#noHoverZone h1 {
+	margin: auto auto;
+	text-align: center;
+	position: relative;
+	top: 50px;
+}
