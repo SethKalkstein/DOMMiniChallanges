@@ -6,7 +6,8 @@
 //Create an HTML page with a large element on the page that says "Don't hover over me" inside of it. When you hover over the element, send an alert to the user that says, "Hey, I told you not to hover over me!"
 
 // Create an HTML page with javascript that listens for a keypress.
-// When the user presses that key, the text of the H1 should show the value of the key they have pressed.
+// When the user presses that key, the text of the H1 should show the 
+// value of the key they have pressed.
 // Example: If the user presses "J", the text inside the H1 should be "J".
 // Create an HTML page with a form. The form should include inputs for a username, email, and password as well as a submit button.
 // In a Javascript file, write code that does the following things:
@@ -30,7 +31,7 @@ function argueWithButton1() {          // changes what button 1 says depending o
 	var content2 = button2.innerHTML;
 	if (content1 == "Button 1" && content2 == "Button 2"){ //They're both in their initial state
 		button1.innerHTML = "I'm right";
-	}
+	} 
 	else if (content2 == "I'm right" ) {     //other has already been changed from initial state at some point
 		button1.innerHTML = "No, I'm right!";
 	}
@@ -61,6 +62,14 @@ function argueWithButton2() {         // changes what button 2 says depending on
 // Exercise 2. Don't hover over me punk!
 var noHoverZone = document.getElementById('noHoverZone');
 
-noHoverZone.addEventListener("mouseover", function(){
-	alert("Hey, I told you not to hover over me!");
+noHoverZone.addEventListener("mouseover", function(){ //looks for the hover
+	alert("Hey, I told you not to hover over me!");  //reacts to the hover
+})
+
+//Exercise 3 Key listener 
+var changingTitle = document.getElementById('changingTitle');
+
+document.addEventListener('keypress', function() { //listens for the event as long as you're on the document
+	const keyName = event.key;           //assigns the pressed key to a variable
+	changingTitle.innerHTML = keyName;  //assigns the that key to our h1 element
 })
