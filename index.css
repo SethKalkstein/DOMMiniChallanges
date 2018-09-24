@@ -25,5 +25,9 @@
 #changingTitle{
 	margin: 25px;
 	padding: 10px;
+	color: blue;
+}
+
+#theForm h1 {
 	color: red;
 }
